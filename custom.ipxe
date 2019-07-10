@@ -13,12 +13,19 @@
 
 
 ####### 
-### sanboot - WORKING, gets to grub on iscsi drive
-echo sanbooting EFI iscsi ubuntu
-sleep 5
-sanboot --drive 0x81 --filename \EFI\ubuntu\grubx64.efi iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
+### sanboot - WORKING, gets to grub on iscsi drive but drops to initramfs
+### echo sanbooting EFI iscsi ubuntu
+### sleep 5
+### sanboot --drive 0x81 --filename \EFI\ubuntu\grubx64.efi iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
 ######
 
+####### 
+### sanhook, sanboot
+echo sanhook sanboot
+sleep 5
+sanhook --drive 0x80 iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
+sanboot --drive 0x81 --filename \EFI\ubuntu\grubx64.efi http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
+######
 
 sleep 2
 goto custom_exit
