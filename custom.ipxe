@@ -6,7 +6,7 @@
 :start
 echo boot!!!
 sleep 5
-sanboot --filename \EFI\ubuntu\grubx64.efi iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:installers
+sanboot iscsi:192.168.1.23::::iqn.2000-01.com.synology:installers
 sleep 2
 goto custom_exit
 
