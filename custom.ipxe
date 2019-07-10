@@ -65,7 +65,7 @@ sanhook --drive 0x81 iscsi:192.168.1.184:::0:iqn.2018-01.vmware:clover
 
 echo sanbooting clover 0x81
 sleep 2
-sanboot --drive 0x81 --filename \EFI\CLOVER\CLOVERX64.efi --no-describe
+sanboot --drive 0x81 --filename \EFI\BOOT\BOOTX64.efi --no-describe
 
 
 sleep 2
