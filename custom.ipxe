@@ -57,27 +57,15 @@ sanunhook
 
 echo sanhooking ubuntu iscsi to 0x80
 sleep 2
-sanhook --drive 0x80 iscsi:192.168.1.184:::1:iqn.2018-01.vmware:disco
+sanhook --drive 0x80 iscsi:192.168.1.184:::0:iqn.2018-01.vmware:disco
 
 echo sanhooking installer iscsi to 0x81
 sleep 2
-sanhook --drive 0x81 iscsi:192.168.1.184:::2:iqn.2018-01.vmware:disco
+sanhook --drive 0x81 iscsi:192.168.1.184:::1:iqn.2018-01.vmware:disco
 
 echo sanbooting 0x81
 sleep 2
 sanboot --drive 0x81 --filename \EFI\BOOT\BOOTx64.EFI --no-describe
-
-#############################
-
-#############################
-###echo sanunhooking
-###sleep 5
-###sanunhook
-###set san-filename \EFI\boot\grubx64.efi
-###set root-path http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
-###sanhook --drive 0x80 ${root-path}
-###sanboot --drive 0x80 --filename \EFI\boot\bootx64.efi
-
 
 
 sleep 2
