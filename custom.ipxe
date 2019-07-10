@@ -61,7 +61,7 @@ sanhook --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64
 
 echo sanbooting 0x81 ISO EFI
 sleep 5
-sanboot --drive 0x81 --no-describe
+sanboot --drive 0x81 --filename \EFI\BOOT\mmx64.efi --no-describe
 
 #############################
 
