@@ -4,10 +4,10 @@
 ###
 
 :start
+####### 
+### boot iso from web - WORKING, booting but unable to find medium
 echo booting ubuntu iso
 sleep 5
-####### 
-### boot iso from web - WORKING
 sanboot --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
 ######
 sleep 2
