@@ -29,10 +29,11 @@
 
 ####### 
 ### sanhook, sanboot same target differnt drive
-echo sanhook sanboot no-describe iso
+echo sanhook sanboot no-describe iso drive
 sleep 5
 sanhook --drive 0x80 iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
-sanboot --no-describe --drive 0x80 --filename \EFI\ubuntu\grubx64.efi
+sanhook --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
+sanboot --no-describe --drive 0x81
 ######
 
 sleep 2
