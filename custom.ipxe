@@ -59,10 +59,10 @@ echo sanhooking iso to 0x80
 sleep 5
 sanhook --drive 0x80 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
 
-echo sanbooting 0x80 ISO EFI
-sleep 5
-sanboot --drive 0x80 --filename \EFI\ubuntu\grubx64.efi --no-describe
-
+#echo sanbooting 0x80 ISO EFI
+#sleep 5
+#sanboot --drive 0x80 --filename \EFI\ubuntu\grubx64.efi --no-describe
+sanboot --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
 #############################
 
 
