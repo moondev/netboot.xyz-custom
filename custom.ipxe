@@ -29,10 +29,14 @@
 
 ####### 
 ### neyboot bionic
-echo sanhook, sanhook, sanboot, no-describe
+echo sanunhooking 0x80
+sleep 5
+sanunhook
+echo sanhooking iscsi to 0x80
 sleep 5
 sanhook --drive 0x80 iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
-### sanhook --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
+echo sanbooting 0x80 EFI
+sleep 5
 sanboot --drive 0x80 --filename \EFI\ubuntu\grubx64.efi --no-describe
 ### sanhook --drive 0x80 iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
 ### sanhook --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
