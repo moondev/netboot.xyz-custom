@@ -13,7 +13,7 @@
 
 
 ####### 
-### sanboot
+### sanboot - WORKING, gets to grub on iscsi drive
 echo sanbooting EFI iscsi ubuntu
 sleep 5
 sanboot --drive 0x81 --filename \EFI\ubuntu\grubx64.efi iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
