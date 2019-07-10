@@ -29,12 +29,11 @@
 
 ####### 
 ### neyboot bionic
-echo netboot bionic
+echo sanhook, sanhook, sanboot
 sleep 5
 sanhook --drive 0x80 iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
-kernel https://boot.netboot.xyz/memdisk raw iso
-initrd http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
-boot
+sanhook --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
+sanboot --no-describe http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
 ### sanhook --drive 0x80 iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
 ### sanhook --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
 ### sanboot --no-describe --drive 0x81
