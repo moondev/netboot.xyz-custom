@@ -4,11 +4,12 @@
 ###
 
 :start
-#### echo Hello world!
+echo sanbooting disco...
+sleep 5
 set initiator-iqn iqn.2010-04.org.ipxe:BKQ42M1
 sanboot iscsi:192.168.1.23:::1:iqn.1998-01.com.vmware.iscsi:disco
-### sleep 10
-
+echo failed...
+sleep 2
 goto custom_exit
 
 :custom_exit
