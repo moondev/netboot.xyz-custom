@@ -5,11 +5,21 @@
 
 :start
 ####### 
-### boot iso from web - WORKING, booting but unable to find medium
-echo booting ubuntu iso
-sleep 5
-sanboot --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
+### boot iso from web - WORKING, booting but "unable to find a medium containing a live file system
+### echo booting ubuntu iso
+### sleep 5
+### sanboot --drive 0x81 http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso
 ######
+
+
+####### 
+### sanboot
+echo sanbooting iscsi ubuntu
+sleep 5
+sanboot --drive 0x81 iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
+######
+
+
 sleep 2
 goto custom_exit
 
