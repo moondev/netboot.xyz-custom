@@ -4,10 +4,9 @@
 ###
 
 :start
-echo sanbooting disco...
+echo boot!!!
 sleep 5
-sanhook --drive 0x81 iscsi:192.168.1.23:::1:iqn.1998-01.com.vmware.iscsi:disco
-### sanboot iscsi:192.168.1.23::::iqn.2000-01.com.synology:installers
+sanboot --filename \EFI\ubuntu\grubx64.efi iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:installers
 sleep 2
 goto custom_exit
 
