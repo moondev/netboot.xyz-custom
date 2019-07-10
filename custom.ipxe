@@ -51,9 +51,13 @@
 
 #############################
 
-echo sanunhooking 0x81
+echo sanunhooking
 sleep 5
 sanunhook
+
+echo sanhooking ubuntu iscsi to 0x80
+sleep 5
+sanhook --drive 0x80 iscsi:192.168.1.23:::1:iqn.1998-01.com.vmware.iscsi:disco
 
 echo sanhooking iso to 0x81
 sleep 5
