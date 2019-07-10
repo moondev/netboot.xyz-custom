@@ -6,8 +6,8 @@
 :start
 echo sanbooting disco...
 sleep 5
-sanhook iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
-sanboot iscsi:192.168.1.23:::1:iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
+sanhook iscsi:192.168.1.23::::iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
+sanboot iscsi:192.168.1.23::::iqn.2000-01.com.synology:desktop-ubuntu-disco-raid0
 echo failed...
 sleep 2
 goto custom_exit
