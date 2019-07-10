@@ -6,7 +6,7 @@
 :start
 echo sanbooting disco...
 sleep 5
-set initiator-iqn iqn.2010-04.org.ipxe:BKQ42M1
+sanhook iscsi:192.168.1.23:::1:iqn.1998-01.com.vmware.iscsi:disco
 sanboot iscsi:192.168.1.23:::1:iqn.1998-01.com.vmware.iscsi:disco
 echo failed...
 sleep 2
