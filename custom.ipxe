@@ -87,7 +87,7 @@ sanhook --drive 0x81 iscsi:192.168.1.114::::iqn.2010-20.freenas:win10
 
 echo sanbooting ubuntu 0x81
 sleep 2
-sanboot --drive 0x81
+sanboot --drive 0x81 --filename \EFI\Boot\bootx64.efi --no-describe
 
 
 
