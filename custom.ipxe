@@ -82,11 +82,11 @@ sanunhook
 
 echo sanhooking ubuntu iscsi to 0x80
 sleep 2
-sanhook --drive 0x80 iscsi:192.168.1.6:::0:iqn.2005-10.org.freenas.ctl:disco-disc-bios
+sanhook --drive 0x80 iscsi:192.168.1.6::::iqn.2010-20.freenas:disco
 
 echo sanbooting ubuntu 0x80
 sleep 2
-sanboot --drive 0x80 --no-describe
+sanboot --drive 0x80
 
 
 
