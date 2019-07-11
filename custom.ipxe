@@ -51,25 +51,44 @@
 
 #############################
 ### WORKS BOTH MOUNTED
+### echo sanunhooking
+### sleep 2
+### sanunhook
+
+### echo sanhooking ubuntu iscsi to 0x80
+### sleep 2
+### sanhook --drive 0x80 iscsi:192.168.1.184:::0:iqn.2018-01.vmware:disco
+
+### echo sanhooking clover 0x81
+### sleep 2
+### sanhook --drive 0x81 iscsi:192.168.1.184:::0:iqn.2018-01.vmware:clover
+
+### echo sanhooking installer 0x82
+### sleep 2
+### sanhook --drive 0x82 iscsi:192.168.1.184:::0:iqn.2018-01.vmware:disco-installer
+
+### echo sanbooting clover 0x81
+### sleep 2
+### sanboot --drive 0x81 --filename \EFI\BOOT\BOOTX64.efi --no-describe
+
+
+
+
+#############################
+### BIOS BOOT
 echo sanunhooking
 sleep 2
 sanunhook
 
 echo sanhooking ubuntu iscsi to 0x80
 sleep 2
-sanhook --drive 0x80 iscsi:192.168.1.184:::0:iqn.2018-01.vmware:disco
+sanhook --drive 0x80 iscsi:192.168.1.6:::0:iqn.2005-10.org.freenas.ctl:disco-disc-bios
 
-echo sanhooking clover 0x81
+echo sanbooting ubuntu 0x80
 sleep 2
-sanhook --drive 0x81 iscsi:192.168.1.184:::0:iqn.2018-01.vmware:clover
+sanboot --drive 0x80 --no-describe
 
-echo sanhooking installer 0x82
-sleep 2
-sanhook --drive 0x82 iscsi:192.168.1.184:::0:iqn.2018-01.vmware:disco-installer
 
-echo sanbooting clover 0x81
-sleep 2
-sanboot --drive 0x81 --filename \EFI\BOOT\BOOTX64.efi --no-describe
 
 
 sleep 2
