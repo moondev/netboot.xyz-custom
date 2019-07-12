@@ -75,11 +75,10 @@
 
 
 #############################
-### BIOS BOOT
+### WINDOWS EFI BOOT - gets to the spinner
 echo sanunhooking
 sleep 2
 sanunhook
-
 echo sanhooking windows iscsi to 0x80
 sleep 2
 sanhook --drive 0x80 iscsi:192.168.1.114::::iqn.2010-20.freenas:win10-efi
@@ -89,7 +88,7 @@ sleep 5
 echo sanbooting ubuntu 0x81
 sleep 2
 sanboot --drive 0x80 --filename \EFI\Microsoft\Boot\bootmgfw.efi --no-describe
-
+##############################
 
 
 
