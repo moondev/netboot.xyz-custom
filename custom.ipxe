@@ -93,21 +93,38 @@
 ##############################
 
 #############################
-### DISCO EFI BOOT
+### DISCO EFI BOOT - gets to a full purple screen
+
+### echo sanunhooking
+### sleep 2
+### sanunhook
+### echo sanhooking ubuntu iscsi to 0x80
+### sleep 2
+### sanhook --drive 0x80 iscsi:192.168.1.114::::iqn.2010-20.freenas:disco-efi
+### sleep 5
+### echo "waiting"
+### sleep 5
+### echo sanbooting disco 0x81
+### sleep 2
+### sanboot --drive 0x80 --filename \EFI\ubuntu\shimx64.efi --no-describe
+##############################
+
+
+#############################
+### DISCO BIOS BOOT
 echo sanunhooking
 sleep 2
 sanunhook
 echo sanhooking ubuntu iscsi to 0x80
 sleep 2
-sanhook --drive 0x80 iscsi:192.168.1.114::::iqn.2010-20.freenas:disco-efi
+sanhook --drive 0x80 iscsi:192.168.1.114::::iqn.2010-20.freenas:disco-bios
 sleep 5
 echo "waiting"
 sleep 5
 echo sanbooting disco 0x81
 sleep 2
-sanboot --drive 0x80 --filename \EFI\ubuntu\shimx64.efi --no-describe
+sanboot --drive 0x80 --no-describe
 ##############################
-
 
 
 sleep 2
