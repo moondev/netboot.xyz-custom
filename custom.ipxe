@@ -111,7 +111,7 @@
 
 
 #############################
-### DISCO BIOS BOOT
+### DISCO BIOS BOOT - error could not boot
 echo sanunhooking
 sleep 2
 sanunhook
