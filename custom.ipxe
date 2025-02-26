@@ -6,6 +6,8 @@
 :custom
 clear custom_choice
 menu This is a Test Menu
+item option_four ${space} four
+item option_five ${space} five
 item --gap This is the first sub menu
 item option_two ${space} Loading an ISO
 item option_one ${space} Loading a kernel and initrd
@@ -31,6 +33,18 @@ boot || goto custom_exit
 :option_three
 echo Chains into another menu...
 chain https://raw.githubusercontent.com/${github_user}/netboot.xyz-custom/master/custom1.ipxe || goto custom
+
+:option_four
+imgfree
+kernel https://github.com/moondev/netboot.xyz-custom/releases/download/v0.1.0/vmlinuz ip=dhcp boot=casper netboot=url url=https://github.com/moondev/netboot.xyz-custom/releases/download/v0.1.0/ubuntu-server-minimal.ubuntu-server.squashfs set gfxpayload=keep
+initrd https://github.com/moondev/netboot.xyz-custom/releases/download/v0.1.0/initrd.gz
+boot || goto custom_exit
+
+:option_five
+kernel https://boot.netboot.xyz/memdisk iso raw
+initrd https://github.com/moondev/netboot.xyz-custom/releases/download/v0.1.0/instakube-v0.1.0.iso
+boot || goto custom_exit
+
 
 :custom_exit
 chain utils.ipxe
